@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import Image from "next/image"
 
 export default function Certifications() {
   const sectionRef = useRef(null)
@@ -48,31 +47,31 @@ export default function Certifications() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="bg-white rounded-lg border border-slate-200 p-8 hover:shadow-lg hover:border-cyan-300 transition-all duration-300 hover:-translate-y-1">
-            <div className="flex items-start gap-6">
+          <div className="bg-white rounded-lg border border-slate-200 p-4 sm:p-8 hover:shadow-lg hover:border-cyan-300 transition-all duration-300 hover:-translate-y-1">
+            <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
               {/* Badge Image */}
-              <div className="flex-shrink-0">
-                <div className="w-32 h-32 relative">
-                  <Image
+              <div className="flex-shrink-0 mx-auto sm:mx-0">
+                <div className="w-24 h-24 sm:w-32 sm:h-32 relative">
+                  <img
                     src="/images/ccp-badge.png"
                     alt="AWS Certified Cloud Practitioner Badge"
-                    width={128}
-                    height={128}
-                    className="object-contain"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               </div>
 
               {/* Content */}
-              <div className="flex-1">
-                <h3 className="text-xl font-bold text-slate-900 mb-2">AWS Certified Cloud Practitioner</h3>
-                <p className="text-teal-600 font-semibold mb-1 text-sm">Credential ID: 596a4f10cae5428696e8d93b36affe15</p>
+              <div className="flex-1 text-center sm:text-left">
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2">AWS Certified Cloud Practitioner</h3>
+                <p className="text-teal-600 font-semibold mb-1 text-xs sm:text-sm break-all sm:break-normal">
+                  Credential ID: 596a4f10cae5428696e8d93b36affe15
+                </p>
                 <p className="text-slate-600 text-sm mb-3">Issued: June 21, 2025</p>
                 <p className="text-slate-700 text-sm leading-relaxed mb-4">
                   Certification demonstrating foundational knowledge of AWS cloud services, including core services,
                   security, billing, and architecture concepts.
                 </p>
-                <div className="flex gap-3">
+                <div className="flex justify-center sm:justify-start gap-3">
                   <a
                     href="https://media.licdn.com/dms/image/v2/D4E2DAQGRbM9Rhwm1bg/profile-treasury-image-shrink_800_800/B4EZg9m8ruGwAg-/0/1753380278413?e=1766044800&v=beta&t=LGJjEiXaNYyIWmrEVNV2-5_-Kv_Vt_0LXKi-MVsAPHk"
                     target="_blank"
